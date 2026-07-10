@@ -714,12 +714,15 @@ h2{
         height:70px;
     }
 
-    .travel-options,
-    .hotel-list,
-    .cards,
-    .gallery-four{
-        grid-template-columns:1fr;
-    }
+.travel-options,
+.hotel-list,
+.cards{
+    grid-template-columns:1fr;
+}
+
+.gallery-four{
+    grid-template-columns:repeat(2,1fr);
+}
 
     .section-header{
         min-height:200px;
