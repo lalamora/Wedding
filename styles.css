@@ -250,6 +250,10 @@ h2{
     background-image:url("images/us6.jpeg");
 }
 
+.rsvp-header{
+    background-image:url("images/us5.jpg");
+}
+
 .timeline-wrapper{
     position:relative;
     max-width:860px;
@@ -381,6 +385,12 @@ h2{
 
 .gallery-four{
     grid-template-columns:repeat(4,1fr);
+}
+
+@media (max-width:900px){
+    .gallery-four{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
 .gallery img{
