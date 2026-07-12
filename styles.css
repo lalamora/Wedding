@@ -79,7 +79,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    background-image:url("images/us1.jpeg");
+    background-image:url("images/us1.JPEG");
     background-size:cover;
     background-position:center;
     padding:100px 24px 90px;
