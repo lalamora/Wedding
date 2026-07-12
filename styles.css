@@ -79,7 +79,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    background-image:url("images/us1.JPEG");
+    background-image:url("images/us1.jpeg");
     background-size:cover;
     background-position:center;
     padding:100px 24px 90px;
@@ -420,9 +420,7 @@ h2{
     grid-template-columns:repeat(3,1fr);
     gap:24px;
 }
-
-.card,
-.travel-card{
+.card{
     background:white;
     padding:28px;
     border-radius:var(--radius);
@@ -431,14 +429,12 @@ h2{
     border-top:3px solid var(--terracotta);
 }
 
-.card:hover,
-.travel-card:hover{
+.card:hover{
     transform:translateY(-6px);
     box-shadow:0 20px 40px rgba(0,0,0,.12);
 }
 
 .card h3,
-.travel-card h3,
 .hotel-section h3{
     font-family:'Playfair Display',serif;
     color:var(--olive-dark);
@@ -446,66 +442,185 @@ h2{
     font-size:22px;
 }
 
-.card p,
-.travel-card p{
+.card p{
     color:var(--light-text);
     font-size:14px;
 }
 
-.travel-options{
+.travel-wrapper{
     max-width:1100px;
-    margin:20px auto 0;
+    margin:40px auto 0;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
+    grid-template-columns:1.3fr 1fr;
+    gap:28px;
     position:relative;
     z-index:2;
 }
 
-.travel-times{
+.travel-option{
+    background:white;
+    padding:32px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    border-top:3px solid var(--terracotta);
+    transition:.35s;
+}
+
+.travel-option:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.travel-option:nth-child(1){
+    grid-row:span 2;
+}
+
+.travel-icon{
+    font-size:48px;
+    margin-bottom:16px;
+    display:block;
+    text-align:center;
+}
+
+.travel-option h3{
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    color:var(--olive-dark);
+    margin-bottom:16px;
+    text-align:center;
+}
+
+.travel-option p{
+    color:var(--light-text);
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:12px;
+}
+
+.travel-highlight{
+    font-weight:500;
+    color:var(--text);
+    background:rgba(229,237,226,.3);
+    padding:14px;
+    border-radius:8px;
+    margin-bottom:18px;
+    text-align:center;
+}
+
+.travel-highlight small{
+    font-size:13px;
+    opacity:0.85;
+    display:block;
+}
+
+.travel-schedule{
+    margin:24px 0;
     display:flex;
     flex-direction:column;
     gap:12px;
-    margin-top:20px;
 }
 
-.travel-leg{
-    display:flex;
-    justify-content:space-between;
+.schedule-item{
+    display:grid;
+    grid-template-columns:1fr auto;
     align-items:center;
-    padding:12px 16px;
-    background:linear-gradient(135deg, rgba(208,128,112,.08) 0%, rgba(229,237,226,.10) 100%);
+    padding:14px 16px;
+    background:linear-gradient(135deg, rgba(208,128,112,.06) 0%, rgba(229,237,226,.08) 100%);
     border-radius:8px;
     border-left:3px solid var(--terracotta);
+    gap:12px;
 }
 
-.travel-label{
-    font-size:13px;
+.schedule-label{
+    font-size:14px;
     color:var(--light-text);
+    text-align:left;
 }
 
-.travel-time{
+.schedule-time{
     font-family:'Playfair Display',serif;
     font-size:18px;
     font-weight:600;
     color:var(--terracotta);
+    white-space:nowrap;
+}
+
+.travel-note{
+    font-size:13px;
+    color:var(--light-text);
+    font-style:italic;
+    margin-top:18px;
+    padding-top:18px;
+    border-top:1px solid rgba(102,116,91,.1);
+    text-align:center;
 }
 
 .parking-list{
-    margin-top:18px;
+    margin:16px 0;
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:12px;
 }
 
 .parking-item{
-    padding:12px 14px;
-    border-radius:10px;
-    background:rgba(229,237,226,.45);
+    padding:14px;
+    background:rgba(229,237,226,.4);
+    border-radius:8px;
     border-left:3px solid var(--olive);
-    color:var(--text);
+}
+
+.parking-item p{
+    margin:0;
     font-size:14px;
 }
+
+.parking-name{
+    font-weight:500;
+    color:var(--olive-dark);
+    margin-bottom:4px !important;
+}
+
+.parking-address{
+    color:var(--light-text);
+    font-size:13px !important;
+}
+
+@media (max-width:900px){
+    .travel-wrapper{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .travel-option{
+        padding:24px;
+    }
+
+    .travel-option:nth-child(1){
+        grid-row:span 1;
+    }
+
+    .travel-option h3{
+        font-size:22px;
+    }
+
+    .travel-option p{
+        font-size:14px;
+    }
+
+    .schedule-item{
+        grid-template-columns:1fr auto;
+        padding:12px 14px;
+    }
+
+    .schedule-label{
+        font-size:13px;
+    }
+
+    .schedule-time{
+        font-size:16px;
+    }
+}
+
 
 .hotel-section{
     max-width:1100px;
@@ -662,6 +777,9 @@ h2{
 
     .hero{
         padding:86px 18px 72px;
+        background-position:left top;
+        background-attachment:fixed;
+
     }
 
     .hero-content{
@@ -958,5 +1076,28 @@ h2{
     .dot{
         width:10px;
         height:10px;
+    }
+}
+.rsvp-button{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 32px;
+    background:var(--olive-dark);
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:500;
+    transition:background 0.3s ease;
+}
+
+.rsvp-button:hover{
+    background:var(--terracotta);
+}
+
+@media (max-width:900px){
+    .rsvp-button{
+        font-size:14px;
+        padding:10px 28px;
     }
 }
