@@ -12,8 +12,16 @@
 <body>
 
 <div class="nav">
-  <div><strong>Lala & Gary</strong></div>
-  <div>
+  <div class="nav-left">
+    <strong>Lala & Gary</strong>
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div id="navMenu">
     <a href="#schedule">Horario</a>
     <a href="#venue">Lugar</a>
     <a href="#travel">Cómo llegar</a>
@@ -213,20 +221,81 @@
     <p class="hotel-intro">Estos son los hoteles recomendados, todos situados cerca del punto de recogida del autobús.</p>
     <div class="hotel-list">
       <div class="hotel-card">
-        <p><strong>Nombre del hotel</strong></p>
-        <p class="hotel-details">Añadir dirección y detalles aquí</p>
+        <p><strong>Hotel NH Madrid Nacional</strong></p>
+        <p class="hotel-details">Dirección: Calle del General Ferrándiz, 1, 28012 Madrid</p>
+      <a class="rsvp-button" href="https://www.nh-hotels.com/hotel/nh-madrid-nacional" target="_blank" rel="noopener">
+        Reservar NH Madrid Nacional
+      </a>
       </div>
       <div class="hotel-card">
-        <p><strong>Nombre del hotel</strong></p>
-        <p class="hotel-details">Añadir dirección y detalles aquí</p>
+        <p><strong>Hotel Mediodía</strong></p>
+        <p class="hotel-details">Dirección: Calle de Mediodía, 2, 28009 Madrid</p>
+      <a class="rsvp-button" href="https://www.hotelmediodia.es" target="_blank" rel="noopener">
+        Reservar Hotel Mediodía
+      </a>
       </div>
       <div class="hotel-card">
-        <p><strong>Nombre del hotel</strong></p>
-        <p class="hotel-details">Añadir dirección y detalles aquí</p>
+        <p><strong>Radisson RED Madrid</strong></p>
+        <p class="hotel-details">Dirección: Calle de Alcalá, 476, 28027 Madrid</p>
+      <a class="rsvp-button" href="https://www.radissonhotels.com/en-us/hotels/radisson-red-madrid" target="_blank" rel="noopener">
+        Reservar Radisson RED Madrid
+      </a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Recomendación de hoteles (pegalo donde quieras dentro de tu espanol.html) -->
+<section class="hotel-section" id="hoteles-recomendados" aria-labelledby="hoteles-titulo">
+  <div class="section-header-content" style="padding:0 20px;">
+    <h2 id="hoteles-titulo" style="text-align:center; margin-bottom:8px;">Hoteles cercanos</h2>
+    <p class="hotel-intro" style="text-align:center;">
+      Estos hoteles están cerca del punto de recogida del autobús. Haz tu reserva con antelación.
+    </p>
+  </div>
+
+  <div class="hotel-list" style="padding:0 7vw;">
+    <!-- NH Madrid Nacional -->
+    <div class="hotel-card" aria-label="NH Madrid Nacional">
+      <h3>NH Madrid Nacional</h3>
+      <p class="hotel-details">Dirección: Calle del General Ferrándiz, 1, 28012 Madrid</p>
+      <p class="hotel-details">Distancia aproximada al punto de recogida: ~10-15 minutos en coche</p>
+      <p class="hotel-details" style="font-style:normal;">
+        Servicios: wifi, desayuno, gym. Habitación doble desde 120€ (ejemplo).
+      </p>
+      <a class="rsvp-button" href="https://www.nh-hotels.com/hotel/nh-madrid-nacional" target="_blank" rel="noopener">
+        Reservar NH Madrid Nacional
+      </a>
+    </div>
+
+    <!-- Hotel Mediodía -->
+    <div class="hotel-card" aria-label="Hotel Mediodía">
+      <h3>Hotel Mediodía</h3>
+      <p class="hotel-details">Dirección: Calle de Mediodía, 2, 28009 Madrid</p>
+      <p class="hotel-details">Distancia aproximada al punto de recogida: ~15-20 minutos en coche</p>
+      <p class="hotel-details" style="font-style:normal;">
+        Servicios: wifi, desayuno, climatización. Habitación doble desde 110€ (ejemplo).
+      </p>
+      <a class="rsvp-button" href="https://www.hotelmediodia.es" target="_blank" rel="noopener">
+        Reservar Hotel Mediodía
+      </a>
+    </div>
+
+    <!-- Radisson RED Madrid -->
+    <div class="hotel-card" aria-label="Radisson RED Madrid">
+      <h3>Radisson RED Madrid</h3>
+      <p class="hotel-details">Dirección: Calle de Alcalá, 476, 28027 Madrid</p>
+      <p class="hotel-details">Distancia aproximada al punto de recogida: ~25-30 minutos en coche</p>
+      <p class="hotel-details" style="font-style:normal;">
+        Servicios: wifi, gimnasio, terraza. Habitación doble desde 130€ (ejemplo).
+      </p>
+      <a class="rsvp-button" href="https://www.radissonhotels.com/en-us/hotels/radisson-red-madrid" target="_blank" rel="noopener">
+        Reservar Radisson RED Madrid
+      </a>
+    </div>
+  </div>
+</section>
+
 
 <section id="info" class="reveal section-with-header madrid-section">
   <div class="section-header madrid-header">
@@ -274,10 +343,10 @@
     <div class="carousel-container">
       <img src="images/final1.jpg" alt="Lala y Gary 1" class="carousel-slide active">
       <img src="images/final2.jpeg" alt="Lala y Gary 2" class="carousel-slide">
-      <img src="images/final3.JPG" alt="Lala y Gary 3" class="carousel-slide">
-      <img src="images/final4.JPG" alt="Lala y Gary 4" class="carousel-slide">
+      <img src="images/final3.jpg" alt="Lala y Gary 3" class="carousel-slide">
+      <img src="images/final4.jpg" alt="Lala y Gary 4" class="carousel-slide">
       <img src="images/final5.jpeg" alt="Lala y Gary 5" class="carousel-slide">
-      <img src="images/final6.JPEG" alt="Lala y Gary 6" class="carousel-slide">
+      <img src="images/final6.jpeg" alt="Lala y Gary 6" class="carousel-slide">
     </div>
     
     <button class="carousel-btn carousel-prev">&#10094;</button>
@@ -293,7 +362,6 @@
     </div>
   </div>
 </div>
-
 
 <section id="rsvp" class="reveal section-with-header">
   <div class="section-header rsvp-header">
@@ -314,6 +382,7 @@
   <p>Con todo nuestro cariño,</p>
   <div class="signature-names">Lala y Gary</div>
 </div>
+
 <a class="back" href="index.html">← Volver a la selección de idioma</a>
 
 <script>
@@ -404,6 +473,30 @@ document.addEventListener('DOMContentLoaded', function() {
   startAutoplay();
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  
+  hamburger.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+  });
+  
+  // Cerrar menú al hacer click en un enlace
+  const navLinks = navMenu.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('active');
+      hamburger.classList.remove('active');
+      document.body.classList.remove('menu-open'); 
+    });
+  });
+});
+</script>
+
 
 </body>
 </html>
