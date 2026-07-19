@@ -841,8 +841,7 @@ h2{
 
     .hero{
         padding:86px 18px 72px;
-        background-position:left top;
-        background-attachment:fixed;
+        background-position:45% center;
 
     }
 
@@ -1163,12 +1162,5 @@ h2{
     .rsvp-button{
         font-size:14px;
         padding:10px 28px;
-    }
-}
-
-@media (max-width: 900px) {
-    .hero {
-        padding: 86px 18px 72px;
-        background-position: 45% center;
     }
 }
