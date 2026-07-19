@@ -841,7 +841,7 @@ h2{
 
     .hero{
         padding:86px 18px 72px;
-        background-position:40% center;
+        background-position:30% center;
 
     }
 
@@ -849,6 +849,11 @@ h2{
         padding:18px;
     }
 
+   #countdown{
+    font-size:clamp(16px, 4vw, 22px);
+    white-space:nowrap;
+}
+   
     h2{
         font-size:34px;
     }
