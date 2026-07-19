@@ -1165,3 +1165,10 @@ h2{
         padding:10px 28px;
     }
 }
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 86px 18px 72px;
+        background-position: 45% center;
+    }
+}
