@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Lala & Gary | English</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <div class="nav">
-  <div><strong>Lala & Gary</strong></div>
-  <div>
+  <div class="nav-left">
+    <strong>Lala & Gary</strong>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div id="navMenu">
     <a href="#schedule">Schedule</a>
     <a href="#venue">Venue</a>
     <a href="#travel">Travel</a>
     <a href="#madrid">Madrid</a>
     <a href="#faq">FAQ</a>
+    <a href="#rsvp">RSVP</a>
   </div>
 </div>
 
@@ -37,9 +48,9 @@
     </div>
     <p class="hero-message">
       We are so happy you're here, we can't wait to celebrate this special day with you.
-	  </p>
-  <p>
-      <strong> Our wedding will take place in Madrid, on April 30th at 7pm.</strong>
+    </p>
+    <p>
+      <strong>Our wedding will take place in Madrid, on April 30th at 7pm.</strong>
     </p>
   </div>
 </div>
@@ -52,6 +63,7 @@
     Please take a moment to read, <strong>RSVP through the link below</strong>, and don't hesitate to reach out if you have any questions.
   </p>
   <p><i>See you in Madrid.</i></p>
+  <a href="https://forms.gle/YV6JigLZnSeQpAWZ9" target="_blank" class="rsvp-button">RSVP</a>
 </div>
 
 <section id="schedule" class="reveal section-with-header schedule-section">
@@ -127,8 +139,7 @@
     <div class="section-header-content">
       <h2>The Venue</h2>
       <p class="center">
-        Built in 1674, the Antiguo Convento de Boadilla del Monte is a place full of history and quiet beauty. 
-	Its old stone details, cloisters, and gardens made us fall in love with it.
+        Built in 1674, the Antiguo Convento de Boadilla del Monte is a place full of history and quiet beauty. Its old stone details, cloisters, and gardens made us fall in love with it.
       </p>
     </div>
   </div>
@@ -160,52 +171,70 @@
     </div>
   </div>
 
-  <div class="travel-options">
-    <div class="travel-card">
+  <div class="travel-wrapper">
+    <div class="travel-option">
+      <div class="travel-icon">🚌</div>
       <h3>Shuttle</h3>
-      <p>We are arranging shuttle buses from a pick-up point near the recommended hotels in central Madrid.</p>
-      <div class="travel-times">
-        <div class="travel-leg">
-          <span class="travel-label">To the venue</span>
-          <span class="travel-time">6:30 PM</span>
+      <p class="travel-highlight">Shuttles leave from Atocha, Plaza del Emperador Carlos V, 8<br><small>In front of Bar El Brillante</small></p>
+      <div class="travel-schedule">
+        <div class="schedule-item">
+          <span class="schedule-label">To the venue</span>
+          <span class="schedule-time">6:15 pm</span>
         </div>
-        <div class="travel-leg">
-          <span class="travel-label">Return to Madrid</span>
-          <span class="travel-time">4:00 AM</span>
+        <div class="schedule-item">
+          <span class="schedule-label">Back to Madrid (first shuttle)</span>
+          <span class="schedule-time">2:00 am</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-label">Back to Madrid (second shuttle)</span>
+          <span class="schedule-time">4:00 am</span>
         </div>
       </div>
+      <p class="travel-note">Please select your preferred return time in the RSVP form.</p>
     </div>
 
-    <div class="travel-card">
-      <h3>Taxi</h3>
-      <p>Uber and Cabify are both available in Madrid and work seamlessly. The ride takes about <strong>20-25 minutes</strong> from most central areas.</p>
+    <div class="travel-option">
+      <div class="travel-icon">🚕</div>
+      <h3>Taxi / Uber</h3>
+      <p>If you prefer to take a taxi, Uber, or Cabify, the ride to the venue is about <strong>20 minutes</strong> from the recommended hotels.</p>
     </div>
 
-    <div class="travel-card">
-      <h3>Driving</h3>
-      <p>If you prefer to drive, there will be two parking lots available at the venue.</p>
+    <div class="travel-option">
+      <div class="travel-icon">🚗</div>
+      <h3>Car</h3>
+      <p class="travel-highlight">Recommended parking lots:</p>
       <div class="parking-list">
-        <div class="parking-item">Parking Lot 1 - details coming soon</div>
-        <div class="parking-item">Parking Lot 2 - details coming soon</div>
+        <div class="parking-item">
+          <p class="parking-name">Aparcamiento El Palacio del Infante don Luis</p>
+          <p class="parking-address">Av. de España, 6, Boadilla del Monte</p>
+        </div>
+        <div class="parking-item">
+          <p class="parking-name">Aparcamiento Plaza de la Concordia</p>
+          <p class="parking-address">Camino de San Sebastián, 7, Boadilla del Monte</p>
+        </div>
       </div>
     </div>
   </div>
 
+
   <div class="hotel-section">
     <h3>Where to Stay</h3>
-    <p class="hotel-intro">We recommend these hotels in central Madrid, all conveniently located near the shuttle pick-up point.</p>
+    <p class="hotel-intro">We recommend these hotels in central Madrid, all conveniently located very close to the shuttle pick-up point.</p>
     <div class="hotel-list">
       <div class="hotel-card">
-        <p><strong>Hotel Name</strong></p>
-        <p class="hotel-details">Add address and details here</p>
+        <p><strong>Hotel NH Madrid Nacional</strong></p>
+        <p class="hotel-details">Calle del General Ferrándiz, 1, 28012 Madrid</p>
+        <a class="rsvp-button" href="https://www.nh-hotels.com/hotel/nh-madrid-nacional" target="_blank" rel="noopener">Reservar NH Madrid Nacional</a>
       </div>
       <div class="hotel-card">
-        <p><strong>Hotel Name</strong></p>
-        <p class="hotel-details">Add address and details here</p>
+        <p><strong>Hotel Mediodía</strong></p>
+        <p class="hotel-details">Calle de Mediodía, 2, 28009 Madrid</p>
+        <a class="rsvp-button" href="https://www.mediodiahotel.com" target="_blank" rel="noopener">Reservar Hotel Mediodía</a>
       </div>
       <div class="hotel-card">
-        <p><strong>Hotel Name</strong></p>
-        <p class="hotel-details">Add address and details here</p>
+        <p><strong>Radisson RED Madrid</strong></p>
+        <p class="hotel-details">Calle de Alcalá, 476, 28027 Madrid</p>
+        <a class="rsvp-button" href="https://www.radissonhotels.com/en-us/hotels/radisson-red-madrid" target="_blank" rel="noopener">Reservar Radisson RED Madrid</a>
       </div>
     </div>
   </div>
@@ -240,20 +269,74 @@
   <div class="faq">
     <div class="faq-item">
       <button class="faq-question" type="button">What is the dress code?<span>+</span></button>
-      <div class="faq-answer"><p>Formal attire. Spring colors are welcome.</p></div>
+      <div class="faq-answer"><p>Formal attire. Think evening wedding guest attire: floor-length gowns, elegant cocktail or midi dresses, or dressy jumpsuits for women; suits or tuxedos for men.</p></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question" type="button">Are children invited?<span>+</span></button>
-      <div class="faq-answer"><p>This is an adults-only celebration unless otherwise indicated.</p></div>
+      <div class="faq-answer"><p>Yes, children are welcome! We would love to celebrate with the whole family. If you plan to bring your children, please make sure to include them in the RSVP form so we can plan accordingly.
+    </p></p></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question" type="button">When should I RSVP?<span>+</span></button>
-      <div class="faq-answer"><p>Please reply by 1 February 2027.</p></div>
+      <div class="faq-answer"><p> Please RSVP by January 15, 2027 so we can finalize the details with the venue and vendors. Thank you!</p></div>
     </div>
   </div>
 </section>
+
+<div class="carousel-wrapper reveal">
+  <div class="carousel">
+    <div class="carousel-container">
+      <img src="images/final1.jpg" alt="Lala & Gary 1" class="carousel-slide active">
+      <img src="images/final2.jpeg" alt="Lala & Gary 2" class="carousel-slide">
+      <img src="images/final3.jpg" alt="Lala & Gary 3" class="carousel-slide">
+      <img src="images/final4.jpg" alt="Lala & Gary 4" class="carousel-slide">
+      <img src="images/final5.jpeg" alt="Lala & Gary 5" class="carousel-slide">
+      <img src="images/final6.jpeg" alt="Lala & Gary 6" class="carousel-slide">
+      <img src="images/us2.jpg" alt="Lala & Gary additional 1" class="carousel-slide">
+      <img src="images/us3.jpg" alt="Lala & Gary additional 2" class="carousel-slide">
+      <img src="images/us10.jpg" alt="Lala & Gary additional 3" class="carousel-slide">
+      <img src="images/us11.jpg" alt="Lala & Gary additional 4" class="carousel-slide">
+    </div>
+
+    <button class="carousel-btn carousel-prev" type="button">&#10094;</button>
+    <button class="carousel-btn carousel-next" type="button">&#10095;</button>
+
+    <div class="carousel-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+      <span class="dot" data-index="5"></span>
+      <span class="dot" data-index="6"></span>
+      <span class="dot" data-index="7"></span>
+      <span class="dot" data-index="8"></span>
+      <span class="dot" data-index="9"></span>
+    </div>
+  </div>
+</div>
+
+<section id="rsvp" class="reveal section-with-header">
+  <div class="section-header rsvp-header">
+    <div class="section-header-overlay"></div>
+    <div class="section-header-content">
+      <h2>RSVP</h2>
+    </div>
+  </div>
+
+  <div class="center" style="padding: 40px 24px;">
+    <p style="margin-bottom: 24px;">We’d love to celebrate with you. Please let us know if you’ll be joining us by filling out the form below. If you need the shuttle, let us know, and please include any dietary restrictions or special requests. Thank you!</p>
+
+    <iframe src="https://forms.gle/YV6JigLZnSeQpAWZ9" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+  </div>
+</section>
+
+<div class="closing-signature reveal">
+  <p>With all our love,</p>
+  <div class="signature-names">Lala and Gary</div>
+</div>
 
 <a class="back" href="index.html">← Back to language selection</a>
 
@@ -299,6 +382,82 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     updateCountdown();
     setInterval(updateCountdown, 60000);
+  }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.dot');
+  const carouselPrev = document.querySelector('.carousel-prev');
+  const carouselNext = document.querySelector('.carousel-next');
+  let autoplayInterval;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+
+    resetAutoplay();
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  function startAutoplay() {
+    autoplayInterval = setInterval(nextSlide, 2500);
+  }
+
+  function resetAutoplay() {
+    clearInterval(autoplayInterval);
+    startAutoplay();
+  }
+
+  if (carouselPrev && carouselNext && slides.length && dots.length) {
+    carouselPrev.addEventListener('click', prevSlide);
+    carouselNext.addEventListener('click', nextSlide);
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        showSlide(parseInt(this.dataset.index));
+      });
+    });
+
+    startAutoplay();
+  }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      });
+    });
   }
 });
 </script>
