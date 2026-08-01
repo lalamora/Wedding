@@ -251,6 +251,14 @@ section:nth-of-type(even){
     padding-bottom: 20px;
 }
 
+#schedule {
+    padding-bottom: 10px;
+}
+
+#faq {
+    padding-bottom: 10px;
+}
+
 h2{
     font-family:'Playfair Display',serif;
     font-size:42px;
